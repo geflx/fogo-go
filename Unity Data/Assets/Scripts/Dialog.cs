@@ -12,6 +12,7 @@ public class Dialog : MonoBehaviour
     public float typingSpeed, firstCountdown = 2.0f;
     public GameObject continueButton, soundManager, indicatorManager, dialogImages;
 
+    public GameObject dialog;
 
     void Start(){
         StartCoroutine(Type());
@@ -31,6 +32,8 @@ public class Dialog : MonoBehaviour
             soundManager.GetComponent<Sound>().gameplay = true;
             dialogImages.SetActive(false);
             indicatorManager.GetComponent<Indicator>().active = true;
+
+            Destroy(dialog);
         }
     }
 

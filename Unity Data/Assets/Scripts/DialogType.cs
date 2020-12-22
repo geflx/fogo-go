@@ -15,7 +15,6 @@ public class DialogType : MonoBehaviour
     public GameObject buttons;
 
     void Start(){
-        // ..
         finished = false;
     }
 
@@ -29,7 +28,7 @@ public class DialogType : MonoBehaviour
                 DialogCanvas.SetActive(true);
                 indicators.SetActive(true);
                 buttons.SetActive(true);
-
+                Debug.Log("hi");
                 finished = true;
             }
         }

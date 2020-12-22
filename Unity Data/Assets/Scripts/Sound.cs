@@ -6,19 +6,15 @@ public class Sound : MonoBehaviour
 {
     public AudioSource[] sources;
 
-    public bool thriller;
-    public bool gameplay;
+    public bool thriller, gameplay, spring;
 
-    // Start is called before the first frame update
-    void Start()
-    {
+    void Start(){
         thriller = false;
         gameplay = false;
+        spring = false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    void Update(){
         if(thriller){
 
             sources[1].Pause();
@@ -32,6 +28,9 @@ public class Sound : MonoBehaviour
             sources[1].Play();
             thriller = false;
             gameplay = false;
+        }else if(spring){
+            sources[2].Play();
+            spring = false;
         }
     }
 }

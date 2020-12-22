@@ -5,13 +5,14 @@ using UnityEngine;
 public class Spring : MonoBehaviour
 {
 	public Animator anim;
-	public GameObject player;
+	public GameObject player, soundManager;
 
 	void OnTriggerEnter2D (Collider2D other){
          if(other.name == "Player")
          {
          	player.GetComponent<Player>().springJump = true;
         	anim.SetBool("PlayAnim", true);
+            soundManager.GetComponent<Sound>().spring = true;
     	}
     }
 

@@ -28,7 +28,6 @@ public class Sound : MonoBehaviour
 
         }else if(gameplay){
 
-            Debug.Log("PLAYED GAMEPLAY!");
             sources[0].Pause();
             sources[1].Play();
             thriller = false;

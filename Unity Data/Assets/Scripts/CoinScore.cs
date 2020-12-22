@@ -13,7 +13,14 @@ public class CoinScore : MonoBehaviour
         Player = GameObject.Find("Player");
     }
     void Update(){
-        int coins = Player.GetComponent<Player>().coins;
+    	int coins = Player.GetComponent<Player>().coins;
+
+        // 10 coins == +1 HP.
+        if(coins == 3){
+        	coins = Player.GetComponent<Player>().coins = 0;
+        	Player.GetComponent<Health>().health++;
+        }
+
         coinDisplay.text = coins.ToString();
     }
     

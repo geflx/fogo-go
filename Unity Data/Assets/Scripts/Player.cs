@@ -27,18 +27,48 @@ public class Player : MonoBehaviour
     public Joystick joystick;
     public bool pcMode;
 
+    [Header("Blink in damage")]
+    public int blinkCount;
+    public float blinkTimer, defBlinkTime;
+    public SpriteRenderer spriteRenderer;
+
     void Start(){
 
         coins = 0;
+        blinkCount = 0;
+
+        blinkTimer = -0.4f;
+        defBlinkTime = 0.1f;
+        jumpForce = 5f;
+        extraJumpsValue = 1f;
+
         power = PlayerPrefs.GetInt("Collectables");
         
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
+    void damageBlink(){
+
+        // If time is positive, desable sprite. Otherwise, enable it.
+        if(blinkCount != 0 && blinkTimer > 0.0f){
+            spriteRenderer.enabled = false;            
+        }else{
+            spriteRenderer.enabled = true;
+        }
+
+        if(blinkTimer <= -defBlinkTime && blinkCount > 0){
+            blinkTimer = defBlinkTime;
+            blinkCount--;
+        }
+    }
+
     void Update(){
     
+        damageBlink();
+        blinkTimer -= Time.deltaTime;
+
         animator.SetBool("doubleJump", false);
 
         if(grounded){

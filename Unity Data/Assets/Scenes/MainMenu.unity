@@ -306,7 +306,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 521e9375ad92a174a834e3f806272da3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.347
+  m_Volume: 0.661
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -683,7 +683,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &724451006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1130,7 +1130,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 10688e3cbeac5b74aa760ad7e666fec1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 55bbb0d11f66ccb46bf56cb95b733830, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1165,7 +1165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1329538123
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1544,7 +1544,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1523744830
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2043,14 +2043,14 @@ RectTransform:
   m_GameObject: {fileID: 1894203441}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.402628, y: 2.402628, z: 2.402628}
   m_Children: []
   m_Father: {fileID: 890248763}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -5, y: -53}
+  m_AnchoredPosition: {x: 555, y: 394.79}
   m_SizeDelta: {x: 557, y: 291}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1894203443
@@ -2065,9 +2065,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6979a899a35dba4d97ec9ea3ac2043e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 1
+  waitTime: 1.7
   shakeTime: 0.5
-  shakeIntensity: 1.7
+  shakeIntensity: 1
 --- !u!114 &1894203444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2140,9 +2140,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5df45be40078c784a9ebb0a9d6527321, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ac7c0423bf5cc5b42a87e44db4d15f30, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1

@@ -6,12 +6,13 @@ public class Sound : MonoBehaviour
 {
     public AudioSource[] sources;
 
-    public bool thriller, gameplay, spring;
+    public bool thriller, gameplay, spring, coin;
 
     void Start(){
         thriller = false;
         gameplay = false;
         spring = false;
+        coin = false;
     }
 
     void Update(){
@@ -31,6 +32,9 @@ public class Sound : MonoBehaviour
         }else if(spring){
             sources[2].Play();
             spring = false;
+        }else if(coin){
+            sources[3].Play();
+            coin = false;
         }
     }
 }

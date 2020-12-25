@@ -33,6 +33,8 @@ public class Dialog : MonoBehaviour
             dialogImages.SetActive(false);
             indicatorManager.GetComponent<Indicator>().active = true;
 
+            // Destroying objects to not interfere in other dialogs.
+            Destroy(continueButton);
             Destroy(dialog);
         }
     }

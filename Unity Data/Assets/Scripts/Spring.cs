@@ -5,8 +5,12 @@ using UnityEngine;
 public class Spring : MonoBehaviour
 {
 	public Animator anim;
-	public GameObject player, soundManager;
+	private GameObject player, soundManager;
 
+    void Awake(){
+        player = GameObject.Find("Player");
+        soundManager = GameObject.Find("SoundManager");
+    }
 	void OnTriggerEnter2D (Collider2D other){
          if(other.name == "Player")
          {

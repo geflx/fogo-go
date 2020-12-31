@@ -98,8 +98,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -1159,7 +1161,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
-      Hash: 00c63daefef35fe4d6b9b46c3e22ec2a
+      Hash: 659d6ceab26f9e4237abaaf29249f293
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Spring
@@ -1345,7 +1347,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerFoldout
   - hash:
       serializedVersion: 2
-      Hash: 1d0f051e2c41f16ae88d28b56fb6e3a3
+      Hash: 1fc5c0dc04b7060222bd088091690edf
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DialogTypeTrigger
@@ -2080,4 +2082,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/Levels.unity
   - Assets/Scenes/Gameplay.unity
-  playerPath: C:/Users/gabriel/Desktop/Teste.apk
+  playerPath: X:/Github/fogo-go/APK Releases/Fogo GO! Closed Beta v0.apk

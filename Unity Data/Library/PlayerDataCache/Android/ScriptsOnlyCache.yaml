@@ -933,7 +933,7 @@ ScriptsOnlyBuild:
     className: SpriteShape
   - hash:
       serializedVersion: 2
-      Hash: 65b5e5396649af53c5d931a0ac27db7d
+      Hash: 80629d325b1eefdcb6f6cde0eca2cf58
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BonfireScript
@@ -1911,7 +1911,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMesh
   - hash:
       serializedVersion: 2
-      Hash: 56498383b85a728abf3bbcb7b7f65ccf
+      Hash: af4c631e5736acc6b6449a10f88d2fad
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player

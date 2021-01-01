@@ -14,11 +14,16 @@ public class Dialog : MonoBehaviour
 
     public GameObject dialog;
 
+    // Unfreeze player movement.
+    private GameObject player;
+
     void Start(){
         StartCoroutine(Type());
 
         soundManager.GetComponent<Sound>().thriller = true;
         indicatorManager.GetComponent<Indicator>().active = false;
+
+        player = GameObject.Find("Player");
     }
 
     void Update(){
@@ -36,6 +41,8 @@ public class Dialog : MonoBehaviour
             // Destroying objects to not interfere in other dialogs.
             Destroy(continueButton);
             Destroy(dialog);
+
+            player.GetComponent<Player>().freeze = false;
         }
     }
 

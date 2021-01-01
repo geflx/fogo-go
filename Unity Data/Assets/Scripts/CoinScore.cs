@@ -16,7 +16,7 @@ public class CoinScore : MonoBehaviour
     	int coins = Player.GetComponent<Player>().coins;
 
         // 10 coins == +1 HP.
-        if(coins == 3){
+        if(coins == 20){
         	coins = Player.GetComponent<Player>().coins = 0;
         	Player.GetComponent<Health>().health++;
         }

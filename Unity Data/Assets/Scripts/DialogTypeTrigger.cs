@@ -26,11 +26,8 @@ public class DialogTypeTrigger : MonoBehaviour
 
             Destroy(gameObject.GetComponent<BoxCollider2D>());
             finished = true;
-            player.SetActive(false);
-            for(int i = 0; i < 100; i++){
-            	//
-            }
-            player.SetActive(true);
+
+            player.GetComponent<Player>().freeze = true;
         }
     }
 }

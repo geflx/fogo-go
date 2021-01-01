@@ -32,6 +32,9 @@ public class Player : MonoBehaviour
     public float blinkTimer, defBlinkTime;
     public SpriteRenderer spriteRenderer;
 
+    [Header("Dialog Assistance")]
+    public bool freeze;
+
     void Start(){
 
         coins = 0;
@@ -47,6 +50,8 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        freeze = false;
     }
 
     void damageBlink(){
@@ -120,8 +125,8 @@ public class Player : MonoBehaviour
                 moveInput = 0f;
             }
         }
-        rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
-
+        float xAxisVelocity = freeze ? 0.0f : moveInput * moveSpeed;
+        rb.velocity = new Vector2(xAxisVelocity, rb.velocity.y);
     }
 
     void jump(){

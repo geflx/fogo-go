@@ -5,32 +5,67 @@ using UnityEngine;
 public class Lumberjack : MonoBehaviour
 {
 
-    public GameObject Player;
+    private GameObject Player;
     public float playerDistance;
     public float moveSpeed;
 
+    private Animator animator;
+    private BoxCollider2D myBoxCollider2D;
+    private Rigidbody2D myRigidbody2D;
+
     public float delayToCheck;
     private float waitingDelay;
+    private float destroyTimer;
     private int direction;
 
-    public bool run = false;
+    public bool run, dead, destroyTimerActive;
+
     
     void Start(){
+        run = false;
+        dead = false;
+        destroyTimerActive = false;
+
         direction = -1;
+        destroyTimer = 1.0f;
         waitingDelay = delayToCheck;
+
         Player =  GameObject.Find("Player");
+        animator = GetComponent<Animator>();
+
+        myBoxCollider2D = GetComponent<BoxCollider2D>();
+        myRigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     void Update(){
         playerDistance = Mathf.Abs(Player.transform.position.x - gameObject.transform.position.x);
 
-        if(playerDistance <= 11.5f){
+        if(playerDistance <= 11.5f)
             run = true;
+                
+        if(Player.transform.position.x - gameObject.transform.position.x  > 20 )
+            Destroy(gameObject);
+        
+        if(dead){
+            moveSpeed = 0;
+            destroyTimerActive = true;
+            animator.SetBool("dead", true);
+            Destroy(myBoxCollider2D);
+            Destroy(myRigidbody2D);
+
+            foreach (Transform child in transform) {
+                GameObject.Destroy(child.gameObject);
+            }
+
+            dead = false;
         }
-        
-        //if(Player.transform.position.x - gameObject.transform.position.x  > 20 )
-            //Destroy(gameObject);
-        
+
+        if(destroyTimerActive){
+        	if(destroyTimer >= 0.0f)
+        		destroyTimer -= Time.deltaTime;
+        	else
+        		Destroy(gameObject);
+        }
 
         if(run){
             if(waitingDelay > 0){

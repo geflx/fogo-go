@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TouchCheck : MonoBehaviour
 {
-
     GameObject Player;
     GameObject Lumberjack;
 
@@ -19,8 +18,8 @@ public class TouchCheck : MonoBehaviour
 
         if(collision.collider.tag == "Player"){
             if(!touched){
-                Player.GetComponent<Health>().health -=1;
-                Destroy(Lumberjack);
+                Player.GetComponent<Health>().health--;
+                Lumberjack.GetComponent<Lumberjack>().dead = true;
             }
             touched = true;
         }

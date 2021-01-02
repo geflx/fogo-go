@@ -84,7 +84,7 @@ GameObject:
   - component: {fileID: 3042606742392373180}
   - component: {fileID: 3042606742392373181}
   - component: {fileID: 3042606742392373169}
-  - component: {fileID: 3042606742392373168}
+  - component: {fileID: 2995340844513696826}
   m_Layer: 0
   m_Name: Lumberjack
   m_TagString: Untagged
@@ -217,41 +217,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d74a26d94b147e4397fff72748c1b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
   playerDistance: 0
   moveSpeed: 3.5
   delayToCheck: 5
   run: 0
---- !u!114 &3042606742392373168
-MonoBehaviour:
+  dead: 0
+  destroyTimerActive: 0
+--- !u!95 &2995340844513696826
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3042606742392373182}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
-  m_HasRenderer: 1
-  m_UseRendererSilhouette: 1
-  m_CastsShadows: 1
-  m_SelfShadows: 0
-  m_ApplyToSortingLayers: 00000000
-  m_ShapePath:
-  - {x: -0.91761094, y: -1.6348996, z: 0.00000001688477}
-  - {x: -0.36238995, y: -1.7273479, z: 0.00000001688477}
-  - {x: 0.6848824, y: -1.6316214, z: 0.00000001688477}
-  - {x: 0.66322947, y: -1.3480439, z: -0.0000009721261}
-  - {x: 0.68908733, y: -1.1169223, z: -0.0000009721261}
-  - {x: 0.28828028, y: -1.0090659, z: -0.0000009721261}
-  - {x: -0.15478359, y: -1.092338, z: 0.00000001688477}
-  - {x: -0.78484994, y: -1.0861058, z: -0.0000009721261}
-  m_ShapePathHash: -2083417645
-  m_Mesh: {fileID: 0}
-  m_InstanceId: -34198
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ad79c017a39dcd34e83f65efbf7fa4de, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3042606742938491640
 GameObject:
   m_ObjectHideFlags: 0

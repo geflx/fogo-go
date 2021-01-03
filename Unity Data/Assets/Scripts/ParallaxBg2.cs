@@ -39,7 +39,6 @@ public class ParallaxBg2 : MonoBehaviour
     public void FixedUpdate(){ 
 
         if(player.transform.position.x < bgIniPosX && !check){
-            //Debug.Log("aborting...");
             return;
         }else if(!check){
             cameraTransform = Camera.main.transform;
